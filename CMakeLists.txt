@@ -20,21 +20,21 @@ add_executable(readmnist
                 include/MnistMLP.h
               )
 
-add_executable(testmnist src/test_model.cpp)
+## add_executable(testmnist src/test_model.cpp)
 
 target_include_directories(readmnist PRIVATE include)
 
-target_include_directories(testmnist PRIVATE include)
+## target_include_directories(testmnist PRIVATE include)
 
 
 target_link_libraries(readmnist "${TORCH_LIBRARIES}")
 target_link_libraries(readmnist "${OpenCV_LIBS}" "${GLib_LIBS}")
 
-target_link_libraries(testmnist "${TORCH_LIBRARIES}")
-target_link_libraries(testmnist "${OpenCV_LIBS}" "${GLib_LIBS}")
+## target_link_libraries(testmnist "${TORCH_LIBRARIES}")
+## target_link_libraries(testmnist "${OpenCV_LIBS}" "${GLib_LIBS}")
 
 
 set_property(TARGET readmnist PROPERTY CXX_STANDARD 17)
 
-set_property(TARGET testmnist PROPERTY CXX_STANDARD 17)
+## set_property(TARGET testmnist PROPERTY CXX_STANDARD 17)
 
